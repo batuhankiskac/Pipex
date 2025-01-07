@@ -6,7 +6,7 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:32 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 20:02:19 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/07 20:20:14 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 void	show_error(char *str);
 int		open_file(const char *filename, int flags, int mode);
-
+void	child_process(int fd, int pipe_fd[2], char *cmd, char *envp[]);
+void	parent_process(int fd, int pipe_fd[2], char *cmd, char *envp[]);
 
 #endif

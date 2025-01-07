@@ -6,17 +6,18 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 20:00:07 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/07 20:21:48 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	main(int argc, char *argv[])
+int	main(int argc, char *argv[], char *envp[])
 {
-	int	infile;
-	int	outfile;
-	int	pipe_fd[2];
+	int		infile;
+	int		outfile;
+	int		pipe_fd[2];
+	pid_t	pid;
 
 	if (argc != 5)
 	{
@@ -25,7 +26,17 @@ int	main(int argc, char *argv[])
 	}
 	infile = open_file(argv[1], O_RDONLY, 0);
 	outfile = open_file(argv[4], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	
-
+	if (pipe(pipe_fd) == -1)
+		show_error("Error creating pipe");
+	pid = fork();
+	if (pid == -1)
+		show_error("Error creating child process");
+	if (pid == 0)
+		child_process(infile, pipe_fd, argv[2], envp);
+	else
+	{
+		waitpid(pid, NULL, 0);
+		parent_process(outfile, pipe_fd, argv[3], envp);
+	}
 	return (0);
 }

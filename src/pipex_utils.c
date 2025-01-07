@@ -6,7 +6,7 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 19:58:18 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/07 20:20:10 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,14 @@ int	open_file(const char *filename, int flags, int mode)
 	if (fd < 0)
 		show_error("Error opening file");
 	return (fd);
+}
+
+void child_process(int fd, int pipe_fd[2], char *cmd, char *envp[])
+{
+
+}
+
+void parent_process(int fd, int pipe_fd[2], char *cmd, char *envp[])
+{
+
 }
