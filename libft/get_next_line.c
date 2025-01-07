@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
+/*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 16:39:15 by batuhankisk       #+#    #+#             */
-/*   Updated: 2025/01/06 16:50:45 by batuhankisk      ###   ########.fr       */
+/*   Created: 2025/01/07 12:03:30 by bkiskac           #+#    #+#             */
+/*   Updated: 2025/01/07 12:03:31 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

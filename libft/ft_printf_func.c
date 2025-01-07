@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_func.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
+/*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 16:57:10 by batuhankisk       #+#    #+#             */
-/*   Updated: 2025/01/06 16:57:30 by batuhankisk      ###   ########.fr       */
+/*   Created: 2025/01/07 12:02:28 by bkiskac           #+#    #+#             */
+/*   Updated: 2025/01/07 12:02:29 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
