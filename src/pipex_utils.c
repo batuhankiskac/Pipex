@@ -6,7 +6,7 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 20:20:10 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/07 22:17:51 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ int	open_file(const char *filename, int flags, int mode)
 	return (fd);
 }
 
-void child_process(int fd, int pipe_fd[2], char *cmd, char *envp[])
+void execute_cmd(char *cmd, char *envp[])
 {
 
 }
 
-void parent_process(int fd, int pipe_fd[2], char *cmd, char *envp[])
+char *find_path(char *cmd, char *envp[])
 {
-
+	
 }

@@ -6,11 +6,21 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 20:21:48 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/07 22:18:18 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
+
+void child_process(int fd, int pipe_fd[2], char *cmd, char *envp[])
+{
+
+}
+
+void parent_process(int fd, int pipe_fd[2], char *cmd, char *envp[])
+{
+	
+}
 
 int	main(int argc, char *argv[], char *envp[])
 {
