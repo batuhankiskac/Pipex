@@ -6,7 +6,7 @@
 #    By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 12:01:58 by bkiskac           #+#    #+#              #
-#    Updated: 2025/01/09 20:52:15 by bkiskac          ###   ########.fr        #
+#    Updated: 2025/01/09 21:12:57 by bkiskac          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,5 @@ fclean: clean
 	make fclean -C libft
 
 re: fclean all
-
-bonus:
-	make -C libft
-	$(CC) $(CFLAGS) $(SRCS_BONUS) $(LIBS) -o $(NAME)
 
 .PHONY: all clean fclean re

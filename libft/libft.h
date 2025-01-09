@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:03:39 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 12:03:40 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/09 21:16:08 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_lstsize(t_list *lst);
 int		ft_printf(const char *format, ...);

@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 20:40:50 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/09 21:21:53 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	execute_cmd(char *cmd, char *envp[])
 	char	**argv;
 
 	argv = ft_split(cmd, ' ');
-	cmd_path = find_path(cmd, envp);
+	cmd_path = find_path(argv[0], envp);
 	if (execve(cmd_path, argv, envp) == -1)
 		show_error("Command execution failed");
 }

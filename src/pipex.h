@@ -6,14 +6,14 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:32 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 20:36:36 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/09 21:13:54 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
-# include "libft.h"
+# include "../libft/libft.h"
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
