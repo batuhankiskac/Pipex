@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
+/*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/09 17:57:34 by batuhankisk       #+#    #+#             */
-/*   Updated: 2025/01/09 17:58:28 by batuhankisk      ###   ########.fr       */
+/*   Created: 2024/10/29 15:13:10 by bkiskac           #+#    #+#             */
+/*   Updated: 2025/01/09 18:22:29 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

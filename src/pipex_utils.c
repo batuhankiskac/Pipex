@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
+/*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 17:56:57 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/09 18:22:02 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,15 @@ void	ft_getenv(char *name, char *envp[])
 		while(envp[i][j] && envp[i][j] != '=')
 			j++;
 		sub = ft_substr(envp[i], 0, j);
-		if(ft_strcmp())
+		if(ft_strcmp(sub, name) == 0)
+		{
+			free(sub);
+			return (envp[i] + j + 1);
+		}
+		free(sub);
+		i++;
 	}
+	return (NULL);
 }
 
 void execute_cmd(char *cmd, char *envp[])

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+         #
+#    By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 12:03:51 by bkiskac           #+#    #+#              #
-#    Updated: 2025/01/09 17:58:57 by batuhankisk      ###   ########.fr        #
+#    Updated: 2025/01/09 18:23:02 by bkiskac          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

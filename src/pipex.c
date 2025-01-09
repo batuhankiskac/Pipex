@@ -6,7 +6,7 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 17:46:38 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/09 18:14:32 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 char *find_path(char *cmd, char *envp[])
 {
-	
+	int		i;
+	char	**all_path;
+	char	*exec;
+
+	i = -1;
 }
 
 void child_process(int infile, int pipe_fd[2], char *cmd, char *envp[])
