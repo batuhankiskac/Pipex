@@ -3,17 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+         #
+#    By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 12:01:58 by bkiskac           #+#    #+#              #
-#    Updated: 2025/01/07 18:41:43 by batuhankisk      ###   ########.fr        #
+#    Updated: 2025/01/09 20:52:15 by bkiskac          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = pipex
+
 SRCS = src/pipex.c src/pipex_utils.c
+SRCS_BONUS = src/pipex_bonus.c src/pipex_utils_bonus.c
+
 OBJS = $(SRCS:.c=.o)
 LIBS = libft/libft.a
 
@@ -32,5 +35,9 @@ fclean: clean
 	make fclean -C libft
 
 re: fclean all
+
+bonus:
+	make -C libft
+	$(CC) $(CFLAGS) $(SRCS_BONUS) $(LIBS) -o $(NAME)
 
 .PHONY: all clean fclean re
