@@ -6,11 +6,16 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 17:22:22 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/09 17:46:38 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
+
+char *find_path(char *cmd, char *envp[])
+{
+	
+}
 
 void child_process(int infile, int pipe_fd[2], char *cmd, char *envp[])
 {
@@ -58,5 +63,5 @@ int	main(int argc, char *argv[], char *envp[])
 		waitpid(pid, NULL, 0);
 		parent_process(outfile, fd, argv[3], envp);
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }
