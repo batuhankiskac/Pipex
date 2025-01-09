@@ -6,7 +6,7 @@
 #    By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 12:01:58 by bkiskac           #+#    #+#              #
-#    Updated: 2025/01/09 21:12:57 by bkiskac          ###   ########.fr        #
+#    Updated: 2025/01/09 21:37:18 by bkiskac          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = pipex
 
 SRCS = src/pipex.c src/pipex_utils.c
-SRCS_BONUS = src/pipex_bonus.c src/pipex_utils_bonus.c
 
 OBJS = $(SRCS:.c=.o)
 LIBS = libft/libft.a

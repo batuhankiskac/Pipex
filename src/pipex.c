@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 21:23:17 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/09 21:40:40 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 char	*find_path(char *cmd, char *envp[])
 {
 	int		i;
-	char	**all_path;
-	char	*path_part;
 	char	*exec;
+	char	**allpath;
+	char	*path_part;
 	char	**s_cmd;
 
 	i = -1;
-	all_path = ft_split(ft_getenv("PATH", envp), ':');
+	allpath = ft_split(ft_getenv("PATH", envp), ':');
 	s_cmd = ft_split(cmd, ' ');
-	while (all_path[++i])
+	while (allpath[++i])
 	{
-		path_part = ft_strjoin(all_path[i], "/");
+		path_part = ft_strjoin(allpath[i], "/");
 		exec = ft_strjoin(path_part, s_cmd[0]);
 		free(path_part);
 		if (access(exec, F_OK | X_OK) == 0)
 		{
-			ft_free_all(all_path);
 			ft_free_all(s_cmd);
+			ft_free_all(allpath);
 			return (exec);
 		}
 		free(exec);
 	}
-	ft_free_all(all_path);
+	ft_free_all(allpath);
 	ft_free_all(s_cmd);
 	return (cmd);
 }
