@@ -6,7 +6,7 @@
 /*   By: batuhankiskac <batuhankiskac@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/07 22:17:51 by batuhankisk      ###   ########.fr       */
+/*   Updated: 2025/01/09 17:25:36 by batuhankisk      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	open_file(const char *filename, int flags, int mode)
 
 void execute_cmd(char *cmd, char *envp[])
 {
-
+	
 }
 
 char *find_path(char *cmd, char *envp[])
 {
-	
+
 }
