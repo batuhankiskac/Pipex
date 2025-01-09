@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 18:22:02 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/09 20:40:50 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	open_file(const char *filename, int flags, int mode)
 	return (fd);
 }
 
-void	ft_free(char **str)
+void	ft_free_all(char **str)
 {
 	int	i;
 
@@ -41,7 +41,7 @@ void	ft_free(char **str)
 	free(str);
 }
 
-void	ft_getenv(char *name, char *envp[])
+char	*ft_getenv(char *name, char *envp[])
 {
 	int		i;
 	int		j;
@@ -51,10 +51,10 @@ void	ft_getenv(char *name, char *envp[])
 	while (envp[i])
 	{
 		j = 0;
-		while(envp[i][j] && envp[i][j] != '=')
+		while (envp[i][j] && envp[i][j] != '=')
 			j++;
 		sub = ft_substr(envp[i], 0, j);
-		if(ft_strcmp(sub, name) == 0)
+		if (ft_strcmp(sub, name) == 0)
 		{
 			free(sub);
 			return (envp[i] + j + 1);
@@ -65,7 +65,13 @@ void	ft_getenv(char *name, char *envp[])
 	return (NULL);
 }
 
-void execute_cmd(char *cmd, char *envp[])
+void	execute_cmd(char *cmd, char *envp[])
 {
+	char	*cmd_path;
+	char	**argv;
 
+	argv = ft_split(cmd, ' ');
+	cmd_path = find_path(cmd, envp);
+	if (execve(cmd_path, argv, envp) == -1)
+		show_error("Command execution failed");
 }
