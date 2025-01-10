@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/10 14:34:58 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/10 14:56:21 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,23 +68,22 @@ void	execute_cmd(char *cmd, char *envp[])
 	char	**argv;
 
 	if (!cmd || !*cmd)
-		show_error("Command not found");
+	{
+		ft_putstr_fd("Command not found\n", 2);
+		exit(127);
+	}
 	argv = ft_split(cmd, ' ');
 	if (!argv || !*argv)
 	{
-		ft_free_all(argv);
-		show_error("Command not found");
+		ft_putstr_fd("Command not found\n", 2);
+		exit(127);
 	}
 	cmd_path = find_path(argv[0], envp);
-	if (cmd_path == NULL)
+	if (!cmd_path)
 	{
-		ft_free_all(argv);
-		show_error("Command not found");
+		ft_putstr_fd("Command not found\n", 2);
+		exit(127);
 	}
 	if (execve(cmd_path, argv, envp) == -1)
-	{
-		ft_free_all(argv);
-		free(cmd_path);
-		show_error("Command execution failed");
-	}
+		show_error("Error executing command");
 }
