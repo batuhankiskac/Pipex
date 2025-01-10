@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:32 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 21:13:54 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/10 16:32:00 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ char	*find_path(char *cmd, char *envp[]);
 void	ft_free_all(char **str);
 void	execute_cmd(char *cmd, char *envp[]);
 void	show_error(char *str);
-void	child_process(int fd, int pipe_fd[2], char *cmd, char *envp[]);
-void	parent_process(int fd, int pipe_fd[2], char *cmd, char *envp[]);
 
 #endif
