@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:40 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/09 21:44:11 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/10 12:08:40 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,8 @@ void	ft_free_all(char **str)
 	int	i;
 
 	i = 0;
-	if (str == NULL)
-		return ;
 	while (str[i])
-	{
-		free(str[i]);
-		i++;
-	}
+		free(str[i++]);
 	free(str);
 }
 
@@ -74,6 +69,8 @@ void	execute_cmd(char *cmd, char *envp[])
 
 	argv = ft_split(cmd, ' ');
 	cmd_path = find_path(argv[0], envp);
+	if (cmd_path == NULL)
+		show_error("Command not found");
 	if (execve(cmd_path, argv, envp) == -1)
 		show_error("Command execution failed");
 }
