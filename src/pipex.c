@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/10 13:24:45 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/10 14:04:22 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*find_path(char *cmd, char *envp[])
 	}
 	ft_free_all(allpath);
 	ft_free_all(s_cmd);
-	return (NULL);
+	return (cmd);
 }
 
 void	child_process(int infile, int pipe_fd[2], char *cmd, char *envp[])
