@@ -6,7 +6,7 @@
 /*   By: bkiskac <bkiskac@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:37 by bkiskac           #+#    #+#             */
-/*   Updated: 2025/01/10 12:17:00 by bkiskac          ###   ########.fr       */
+/*   Updated: 2025/01/10 13:24:45 by bkiskac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,30 @@
 
 char	*find_path(char *cmd, char *envp[])
 {
-	char	*path;
-	char	**paths;
-	char	*tmp;
 	int		i;
+	char	*exec;
+	char	**allpath;
+	char	*path_part;
+	char	**s_cmd;
 
-	path = ft_getenv("PATH", envp);
-	paths = ft_split(path, ':');
-	i = 0;
-	while (paths[i])
+	allpath = ft_split(ft_getenv("PATH", envp), ':');
+	s_cmd = ft_split(cmd, ' ');
+	i = -1;
+	while (allpath[++i])
 	{
-		tmp = ft_strjoin(paths[i], "/");
-		tmp = ft_strjoin(tmp, cmd);
-		if (access(tmp, F_OK) == 0)
+		path_part = ft_strjoin(allpath[i], "/");
+		exec = ft_strjoin(path_part, s_cmd[0]);
+		free(path_part);
+		if (access(exec, F_OK | X_OK) == 0)
 		{
-			ft_free_all(paths);
-			return (tmp);
+			ft_free_all(allpath);
+			ft_free_all(s_cmd);
+			return (exec);
 		}
-		free(tmp);
-		i++;
+		free(exec);
 	}
-	ft_free_all(paths);
+	ft_free_all(allpath);
+	ft_free_all(s_cmd);
 	return (NULL);
 }
 
